@@ -7,12 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		794EAF1C213ABBA300939E5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EAF1B213ABBA300939E5B /* AppDelegate.swift */; };
+		794EAF2E213AC64000939E5B /* CryptoCompareResponseParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EAF2D213AC64000939E5B /* CryptoCompareResponseParserTests.swift */; };
+		794EAF30213AC86500939E5B /* CoinListsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 794EAF2F213AC86500939E5B /* CoinListsResponse.json */; };
 		79ABEDD4213704BC009C8FE4 /* CryptoCompareApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ABEDCA213704BB009C8FE4 /* CryptoCompareApi.framework */; };
 		79ABEDD9213704BC009C8FE4 /* CryptoCompareApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDD8213704BC009C8FE4 /* CryptoCompareApiTests.swift */; };
 		79ABEDDB213704BC009C8FE4 /* CryptoCompareApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 79ABEDCD213704BB009C8FE4 /* CryptoCompareApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79ABEDE5213716CD009C8FE4 /* CryptoCompareApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDE4213716CD009C8FE4 /* CryptoCompareApi.swift */; };
+		79ABEDE721371C0C009C8FE4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDE621371C0C009C8FE4 /* Result.swift */; };
+		79ABEDEB21371CDF009C8FE4 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDEA21371CDF009C8FE4 /* APIRequest.swift */; };
+		79ABEDF02137258C009C8FE4 /* CryptoCompareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDEF2137258C009C8FE4 /* CryptoCompareResponse.swift */; };
+		79ABEDF221372F1E009C8FE4 /* GetCoinListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDF121372F1E009C8FE4 /* GetCoinListRequest.swift */; };
+		79ABEDF421373078009C8FE4 /* GetSymbolsPriceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDF321373078009C8FE4 /* GetSymbolsPriceRequest.swift */; };
+		79ABEDF621373083009C8FE4 /* GetSymbolPriceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDF521373083009C8FE4 /* GetSymbolPriceRequest.swift */; };
+		79ABEDF92137D908009C8FE4 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDF82137D908009C8FE4 /* Exchange.swift */; };
+		79ABEDFC2137E210009C8FE4 /* HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDFB2137E210009C8FE4 /* HTTPParameter.swift */; };
+		79ABEDFE2137E272009C8FE4 /* CryptoCompareError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDFD2137E272009C8FE4 /* CryptoCompareError.swift */; };
+		79ABEE02213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE01213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift */; };
+		79ABEE0421380AAE009C8FE4 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0321380AAE009C8FE4 /* RequestBuilder.swift */; };
+		79ABEE0621380C3C009C8FE4 /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0521380C3C009C8FE4 /* ResponseValidator.swift */; };
+		79ABEE0821380C86009C8FE4 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0721380C86009C8FE4 /* ResponseParser.swift */; };
+		79ABEE0A21380EB7009C8FE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0921380EB7009C8FE4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		794EAF2B213ABBEC00939E5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79ABEDC1213704BB009C8FE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 794EAF18213ABBA200939E5B;
+			remoteInfo = TestTarget;
+		};
 		79ABEDD5213704BC009C8FE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79ABEDC1213704BB009C8FE4 /* Project object */;
@@ -23,15 +48,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		794EAF19213ABBA200939E5B /* TestTarget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTarget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		794EAF1B213ABBA300939E5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		794EAF27213ABBA600939E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		794EAF2D213AC64000939E5B /* CryptoCompareResponseParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareResponseParserTests.swift; sourceTree = "<group>"; };
+		794EAF2F213AC86500939E5B /* CoinListsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CoinListsResponse.json; sourceTree = "<group>"; };
 		79ABEDCA213704BB009C8FE4 /* CryptoCompareApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoCompareApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79ABEDCD213704BB009C8FE4 /* CryptoCompareApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCompareApi.h; sourceTree = "<group>"; };
 		79ABEDCE213704BB009C8FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79ABEDD3213704BC009C8FE4 /* CryptoCompareApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCompareApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79ABEDD8213704BC009C8FE4 /* CryptoCompareApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareApiTests.swift; sourceTree = "<group>"; };
 		79ABEDDA213704BC009C8FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79ABEDE4213716CD009C8FE4 /* CryptoCompareApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareApi.swift; sourceTree = "<group>"; };
+		79ABEDE621371C0C009C8FE4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		79ABEDEA21371CDF009C8FE4 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		79ABEDEF2137258C009C8FE4 /* CryptoCompareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareResponse.swift; sourceTree = "<group>"; };
+		79ABEDF121372F1E009C8FE4 /* GetCoinListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoinListRequest.swift; sourceTree = "<group>"; };
+		79ABEDF321373078009C8FE4 /* GetSymbolsPriceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSymbolsPriceRequest.swift; sourceTree = "<group>"; };
+		79ABEDF521373083009C8FE4 /* GetSymbolPriceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSymbolPriceRequest.swift; sourceTree = "<group>"; };
+		79ABEDF82137D908009C8FE4 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		79ABEDFB2137E210009C8FE4 /* HTTPParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameter.swift; sourceTree = "<group>"; };
+		79ABEDFD2137E272009C8FE4 /* CryptoCompareError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareError.swift; sourceTree = "<group>"; };
+		79ABEE01213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareRequestBuilderTests.swift; sourceTree = "<group>"; };
+		79ABEE0321380AAE009C8FE4 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		79ABEE0521380C3C009C8FE4 /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
+		79ABEE0721380C86009C8FE4 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		79ABEE0921380EB7009C8FE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		794EAF16213ABBA200939E5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79ABEDC6213704BB009C8FE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,11 +102,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		794EAF1A213ABBA300939E5B /* TestTarget */ = {
+			isa = PBXGroup;
+			children = (
+				794EAF1B213ABBA300939E5B /* AppDelegate.swift */,
+				794EAF27213ABBA600939E5B /* Info.plist */,
+			);
+			path = TestTarget;
+			sourceTree = "<group>";
+		};
+		794EAF31213AC90400939E5B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				794EAF2F213AC86500939E5B /* CoinListsResponse.json */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		79ABEDC0213704BB009C8FE4 = {
 			isa = PBXGroup;
 			children = (
 				79ABEDCC213704BB009C8FE4 /* CryptoCompareApi */,
 				79ABEDD7213704BC009C8FE4 /* CryptoCompareApiTests */,
+				794EAF1A213ABBA300939E5B /* TestTarget */,
 				79ABEDCB213704BB009C8FE4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +134,7 @@
 			children = (
 				79ABEDCA213704BB009C8FE4 /* CryptoCompareApi.framework */,
 				79ABEDD3213704BC009C8FE4 /* CryptoCompareApiTests.xctest */,
+				794EAF19213ABBA200939E5B /* TestTarget.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,7 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				79ABEDCD213704BB009C8FE4 /* CryptoCompareApi.h */,
+				79ABEDE4213716CD009C8FE4 /* CryptoCompareApi.swift */,
 				79ABEDCE213704BB009C8FE4 /* Info.plist */,
+				79ABEDF72137D8F6009C8FE4 /* Models */,
+				79ABEDEC21371E01009C8FE4 /* Requests */,
+				79ABEDFA2137E13F009C8FE4 /* Utils */,
 			);
 			path = CryptoCompareApi;
 			sourceTree = "<group>";
@@ -80,10 +155,47 @@
 		79ABEDD7213704BC009C8FE4 /* CryptoCompareApiTests */ = {
 			isa = PBXGroup;
 			children = (
+				794EAF31213AC90400939E5B /* Responses */,
 				79ABEDD8213704BC009C8FE4 /* CryptoCompareApiTests.swift */,
 				79ABEDDA213704BC009C8FE4 /* Info.plist */,
+				79ABEE01213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift */,
+				79ABEE0921380EB7009C8FE4 /* Constants.swift */,
+				794EAF2D213AC64000939E5B /* CryptoCompareResponseParserTests.swift */,
 			);
 			path = CryptoCompareApiTests;
+			sourceTree = "<group>";
+		};
+		79ABEDEC21371E01009C8FE4 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				79ABEDF121372F1E009C8FE4 /* GetCoinListRequest.swift */,
+				79ABEDF321373078009C8FE4 /* GetSymbolsPriceRequest.swift */,
+				79ABEDF521373083009C8FE4 /* GetSymbolPriceRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		79ABEDF72137D8F6009C8FE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79ABEDEA21371CDF009C8FE4 /* APIRequest.swift */,
+				79ABEDEF2137258C009C8FE4 /* CryptoCompareResponse.swift */,
+				79ABEDF82137D908009C8FE4 /* Exchange.swift */,
+				79ABEDFD2137E272009C8FE4 /* CryptoCompareError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79ABEDFA2137E13F009C8FE4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79ABEDE621371C0C009C8FE4 /* Result.swift */,
+				79ABEDFB2137E210009C8FE4 /* HTTPParameter.swift */,
+				79ABEE0321380AAE009C8FE4 /* RequestBuilder.swift */,
+				79ABEE0521380C3C009C8FE4 /* ResponseValidator.swift */,
+				79ABEE0721380C86009C8FE4 /* ResponseParser.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +212,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		794EAF18213ABBA200939E5B /* TestTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 794EAF28213ABBA600939E5B /* Build configuration list for PBXNativeTarget "TestTarget" */;
+			buildPhases = (
+				794EAF15213ABBA200939E5B /* Sources */,
+				794EAF16213ABBA200939E5B /* Frameworks */,
+				794EAF17213ABBA200939E5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestTarget;
+			productName = TestTarget;
+			productReference = 794EAF19213ABBA200939E5B /* TestTarget.app */;
+			productType = "com.apple.product-type.application";
+		};
 		79ABEDC9213704BB009C8FE4 /* CryptoCompareApi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79ABEDDE213704BC009C8FE4 /* Build configuration list for PBXNativeTarget "CryptoCompareApi" */;
@@ -130,6 +259,7 @@
 			);
 			dependencies = (
 				79ABEDD6213704BC009C8FE4 /* PBXTargetDependency */,
+				794EAF2C213ABBEC00939E5B /* PBXTargetDependency */,
 			);
 			name = CryptoCompareApiTests;
 			productName = CryptoCompareApiTests;
@@ -146,11 +276,16 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = tapkain;
 				TargetAttributes = {
+					794EAF18213ABBA200939E5B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					79ABEDC9213704BB009C8FE4 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					79ABEDD2213704BC009C8FE4 = {
 						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 794EAF18213ABBA200939E5B;
 					};
 				};
 			};
@@ -160,6 +295,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 79ABEDC0213704BB009C8FE4;
 			productRefGroup = 79ABEDCB213704BB009C8FE4 /* Products */;
@@ -168,11 +304,19 @@
 			targets = (
 				79ABEDC9213704BB009C8FE4 /* CryptoCompareApi */,
 				79ABEDD2213704BC009C8FE4 /* CryptoCompareApiTests */,
+				794EAF18213ABBA200939E5B /* TestTarget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		794EAF17213ABBA200939E5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79ABEDC8213704BB009C8FE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,16 +328,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794EAF30213AC86500939E5B /* CoinListsResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		794EAF15213ABBA200939E5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794EAF1C213ABBA300939E5B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79ABEDC5213704BB009C8FE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ABEDF621373083009C8FE4 /* GetSymbolPriceRequest.swift in Sources */,
+				79ABEDFC2137E210009C8FE4 /* HTTPParameter.swift in Sources */,
+				79ABEDE721371C0C009C8FE4 /* Result.swift in Sources */,
+				79ABEE0621380C3C009C8FE4 /* ResponseValidator.swift in Sources */,
+				79ABEDE5213716CD009C8FE4 /* CryptoCompareApi.swift in Sources */,
+				79ABEDF02137258C009C8FE4 /* CryptoCompareResponse.swift in Sources */,
+				79ABEDEB21371CDF009C8FE4 /* APIRequest.swift in Sources */,
+				79ABEDF221372F1E009C8FE4 /* GetCoinListRequest.swift in Sources */,
+				79ABEE0421380AAE009C8FE4 /* RequestBuilder.swift in Sources */,
+				79ABEDF421373078009C8FE4 /* GetSymbolsPriceRequest.swift in Sources */,
+				79ABEDFE2137E272009C8FE4 /* CryptoCompareError.swift in Sources */,
+				79ABEDF92137D908009C8FE4 /* Exchange.swift in Sources */,
+				79ABEE0821380C86009C8FE4 /* ResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,13 +367,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ABEE02213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift in Sources */,
 				79ABEDD9213704BC009C8FE4 /* CryptoCompareApiTests.swift in Sources */,
+				794EAF2E213AC64000939E5B /* CryptoCompareResponseParserTests.swift in Sources */,
+				79ABEE0A21380EB7009C8FE4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		794EAF2C213ABBEC00939E5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 794EAF18213ABBA200939E5B /* TestTarget */;
+			targetProxy = 794EAF2B213ABBEC00939E5B /* PBXContainerItemProxy */;
+		};
 		79ABEDD6213704BC009C8FE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 79ABEDC9213704BB009C8FE4 /* CryptoCompareApi */;
@@ -216,6 +390,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		794EAF29213ABBA600939E5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3J3S3699E;
+				INFOPLIST_FILE = TestTarget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.TestTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		794EAF2A213ABBA600939E5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3J3S3699E;
+				INFOPLIST_FILE = TestTarget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.TestTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		79ABEDDC213704BC009C8FE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -339,15 +549,18 @@
 		79ABEDDF213704BC009C8FE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = A3J3S3699E;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CryptoCompareApi/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +568,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.CryptoCompareApi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,15 +579,18 @@
 		79ABEDE0213704BC009C8FE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = A3J3S3699E;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CryptoCompareApi/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +598,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.CryptoCompareApi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -389,8 +608,10 @@
 		79ABEDE2213704BC009C8FE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3J3S3699E;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CryptoCompareApiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -399,16 +620,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.CryptoCompareApiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestTarget.app/TestTarget";
 			};
 			name = Debug;
 		};
 		79ABEDE3213704BC009C8FE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3J3S3699E;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CryptoCompareApiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,14 +642,25 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.CryptoCompareApiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestTarget.app/TestTarget";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		794EAF28213ABBA600939E5B /* Build configuration list for PBXNativeTarget "TestTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				794EAF29213ABBA600939E5B /* Debug */,
+				794EAF2A213ABBA600939E5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79ABEDC4213704BB009C8FE4 /* Build configuration list for PBXProject "CryptoCompareApi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
