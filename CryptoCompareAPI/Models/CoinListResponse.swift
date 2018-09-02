@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias CoinListResponse = [String: CoinListItem]
+public typealias CoinListResponse = [String: CoinListItem]
 
-struct CoinListItem: Decodable {
+public struct CoinListItem: Decodable {
   enum CodingKeys: String, CodingKey {
     case id = "Id"
     case url = "Url"

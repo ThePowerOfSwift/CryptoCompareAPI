@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct CryptoCompareApi {
+public struct CryptoCompareAPI {
   private let baseEndpoint = "https://min-api.cryptocompare.com/data/"
   private let session: URLSession
   private let applicationName: String?

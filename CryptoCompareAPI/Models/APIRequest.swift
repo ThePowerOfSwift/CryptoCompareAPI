@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol APIRequest: Codable {
+public protocol APIRequest: Codable {
   associatedtype Response: Decodable
   
   var resourceName: String { get }
@@ -17,7 +17,7 @@ protocol APIRequest: Codable {
 
 
 extension APIRequest {
-  func makeURLQueryItems() throws -> [URLQueryItem] {
+  public func makeURLQueryItems() throws -> [URLQueryItem] {
     let parametersData = try JSONEncoder().encode(self)
     let parameters = try JSONDecoder().decode([String: HTTPParameter].self, from: parametersData)
     

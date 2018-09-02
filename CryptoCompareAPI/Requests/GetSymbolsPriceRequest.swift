@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct GetSymbolsPriceRequest: APIRequest {
-  typealias Response = [String: GetSymbolPriceRequest.Response]
+public struct GetSymbolsPriceRequest: APIRequest {
+  public typealias Response = [String: GetSymbolPriceRequest.Response]
   
-  var resourceName: String {
+  public var resourceName: String {
     return "pricemulti"
   }
   

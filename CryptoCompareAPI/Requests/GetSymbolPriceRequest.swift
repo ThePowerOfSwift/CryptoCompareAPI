@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct GetSymbolPriceRequest: APIRequest {
-  typealias Response = [String: Decimal]
+public struct GetSymbolPriceRequest: APIRequest {
+  public typealias Response = [String: Decimal]
   
-  var resourceName: String {
+  public var resourceName: String {
     return "price"
   }
   

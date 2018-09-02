@@ -15,9 +15,9 @@
 		794EAF38213C06DA00939E5B /* SymbolPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = 794EAF37213C06DA00939E5B /* SymbolPrice.json */; };
 		794EAF3A213C070000939E5B /* SymbolsPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = 794EAF39213C070000939E5B /* SymbolsPrice.json */; };
 		79ABEDD4213704BC009C8FE4 /* CryptoCompareApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ABEDCA213704BB009C8FE4 /* CryptoCompareApi.framework */; };
-		79ABEDD9213704BC009C8FE4 /* CryptoCompareApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDD8213704BC009C8FE4 /* CryptoCompareApiTests.swift */; };
-		79ABEDDB213704BC009C8FE4 /* CryptoCompareApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 79ABEDCD213704BB009C8FE4 /* CryptoCompareApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79ABEDE5213716CD009C8FE4 /* CryptoCompareApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDE4213716CD009C8FE4 /* CryptoCompareApi.swift */; };
+		79ABEDD9213704BC009C8FE4 /* CryptoCompareAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDD8213704BC009C8FE4 /* CryptoCompareAPITests.swift */; };
+		79ABEDDB213704BC009C8FE4 /* CryptoCompareAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 79ABEDCD213704BB009C8FE4 /* CryptoCompareAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79ABEDE5213716CD009C8FE4 /* CryptoCompareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDE4213716CD009C8FE4 /* CryptoCompareAPI.swift */; };
 		79ABEDE721371C0C009C8FE4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDE621371C0C009C8FE4 /* Result.swift */; };
 		79ABEDEB21371CDF009C8FE4 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDEA21371CDF009C8FE4 /* APIRequest.swift */; };
 		79ABEDF02137258C009C8FE4 /* CryptoCompareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDEF2137258C009C8FE4 /* CryptoCompareResponse.swift */; };
@@ -30,7 +30,7 @@
 		79ABEE02213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE01213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift */; };
 		79ABEE0421380AAE009C8FE4 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0321380AAE009C8FE4 /* RequestBuilder.swift */; };
 		79ABEE0621380C3C009C8FE4 /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0521380C3C009C8FE4 /* ResponseValidator.swift */; };
-		79ABEE0A21380EB7009C8FE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0921380EB7009C8FE4 /* Constants.swift */; };
+		79ABEE0A21380EB7009C8FE4 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0921380EB7009C8FE4 /* Shared.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,12 +60,12 @@
 		794EAF37213C06DA00939E5B /* SymbolPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SymbolPrice.json; sourceTree = "<group>"; };
 		794EAF39213C070000939E5B /* SymbolsPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SymbolsPrice.json; sourceTree = "<group>"; };
 		79ABEDCA213704BB009C8FE4 /* CryptoCompareApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoCompareApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		79ABEDCD213704BB009C8FE4 /* CryptoCompareApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCompareApi.h; sourceTree = "<group>"; };
+		79ABEDCD213704BB009C8FE4 /* CryptoCompareAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCompareAPI.h; sourceTree = "<group>"; };
 		79ABEDCE213704BB009C8FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79ABEDD3213704BC009C8FE4 /* CryptoCompareApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCompareApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79ABEDD8213704BC009C8FE4 /* CryptoCompareApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareApiTests.swift; sourceTree = "<group>"; };
+		79ABEDD8213704BC009C8FE4 /* CryptoCompareAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareAPITests.swift; sourceTree = "<group>"; };
 		79ABEDDA213704BC009C8FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79ABEDE4213716CD009C8FE4 /* CryptoCompareApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareApi.swift; sourceTree = "<group>"; };
+		79ABEDE4213716CD009C8FE4 /* CryptoCompareAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareAPI.swift; sourceTree = "<group>"; };
 		79ABEDE621371C0C009C8FE4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		79ABEDEA21371CDF009C8FE4 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		79ABEDEF2137258C009C8FE4 /* CryptoCompareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareResponse.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		79ABEE01213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareRequestBuilderTests.swift; sourceTree = "<group>"; };
 		79ABEE0321380AAE009C8FE4 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		79ABEE0521380C3C009C8FE4 /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
-		79ABEE0921380EB7009C8FE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		79ABEE0921380EB7009C8FE4 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +129,8 @@
 		79ABEDC0213704BB009C8FE4 = {
 			isa = PBXGroup;
 			children = (
-				79ABEDCC213704BB009C8FE4 /* CryptoCompareApi */,
-				79ABEDD7213704BC009C8FE4 /* CryptoCompareApiTests */,
+				79ABEDCC213704BB009C8FE4 /* CryptoCompareAPI */,
+				79ABEDD7213704BC009C8FE4 /* CryptoCompareAPITests */,
 				794EAF1A213ABBA300939E5B /* TestTarget */,
 				79ABEDCB213704BB009C8FE4 /* Products */,
 			);
@@ -146,30 +146,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		79ABEDCC213704BB009C8FE4 /* CryptoCompareApi */ = {
+		79ABEDCC213704BB009C8FE4 /* CryptoCompareAPI */ = {
 			isa = PBXGroup;
 			children = (
-				79ABEDCD213704BB009C8FE4 /* CryptoCompareApi.h */,
-				79ABEDE4213716CD009C8FE4 /* CryptoCompareApi.swift */,
+				79ABEDCD213704BB009C8FE4 /* CryptoCompareAPI.h */,
+				79ABEDE4213716CD009C8FE4 /* CryptoCompareAPI.swift */,
 				79ABEDCE213704BB009C8FE4 /* Info.plist */,
 				79ABEDF72137D8F6009C8FE4 /* Models */,
 				79ABEDEC21371E01009C8FE4 /* Requests */,
 				79ABEDFA2137E13F009C8FE4 /* Utils */,
 			);
-			path = CryptoCompareApi;
+			path = CryptoCompareAPI;
 			sourceTree = "<group>";
 		};
-		79ABEDD7213704BC009C8FE4 /* CryptoCompareApiTests */ = {
+		79ABEDD7213704BC009C8FE4 /* CryptoCompareAPITests */ = {
 			isa = PBXGroup;
 			children = (
 				794EAF31213AC90400939E5B /* Responses */,
-				79ABEDD8213704BC009C8FE4 /* CryptoCompareApiTests.swift */,
+				79ABEDD8213704BC009C8FE4 /* CryptoCompareAPITests.swift */,
 				79ABEDDA213704BC009C8FE4 /* Info.plist */,
 				79ABEE01213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift */,
-				79ABEE0921380EB7009C8FE4 /* Constants.swift */,
+				79ABEE0921380EB7009C8FE4 /* Shared.swift */,
 				794EAF2D213AC64000939E5B /* CryptoCompareResponseParserTests.swift */,
 			);
-			path = CryptoCompareApiTests;
+			path = CryptoCompareAPITests;
 			sourceTree = "<group>";
 		};
 		79ABEDEC21371E01009C8FE4 /* Requests */ = {
@@ -212,7 +212,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79ABEDDB213704BC009C8FE4 /* CryptoCompareApi.h in Headers */,
+				79ABEDDB213704BC009C8FE4 /* CryptoCompareAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +296,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 79ABEDC4213704BB009C8FE4 /* Build configuration list for PBXProject "CryptoCompareApi" */;
+			buildConfigurationList = 79ABEDC4213704BB009C8FE4 /* Build configuration list for PBXProject "CryptoCompareAPI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -362,7 +362,7 @@
 				79ABEDE721371C0C009C8FE4 /* Result.swift in Sources */,
 				794EAF33213ADCCC00939E5B /* CoinListResponse.swift in Sources */,
 				79ABEE0621380C3C009C8FE4 /* ResponseValidator.swift in Sources */,
-				79ABEDE5213716CD009C8FE4 /* CryptoCompareApi.swift in Sources */,
+				79ABEDE5213716CD009C8FE4 /* CryptoCompareAPI.swift in Sources */,
 				79ABEDF02137258C009C8FE4 /* CryptoCompareResponse.swift in Sources */,
 				79ABEDEB21371CDF009C8FE4 /* APIRequest.swift in Sources */,
 				79ABEDF221372F1E009C8FE4 /* GetCoinListRequest.swift in Sources */,
@@ -378,9 +378,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				79ABEE02213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift in Sources */,
-				79ABEDD9213704BC009C8FE4 /* CryptoCompareApiTests.swift in Sources */,
+				79ABEDD9213704BC009C8FE4 /* CryptoCompareAPITests.swift in Sources */,
 				794EAF2E213AC64000939E5B /* CryptoCompareResponseParserTests.swift in Sources */,
-				79ABEE0A21380EB7009C8FE4 /* Constants.swift in Sources */,
+				79ABEE0A21380EB7009C8FE4 /* Shared.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +671,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79ABEDC4213704BB009C8FE4 /* Build configuration list for PBXProject "CryptoCompareApi" */ = {
+		79ABEDC4213704BB009C8FE4 /* Build configuration list for PBXProject "CryptoCompareAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79ABEDDC213704BC009C8FE4 /* Debug */,

@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct GetCoinListRequest: APIRequest {
-  typealias Response = CoinListResponse
+public struct GetCoinListRequest: APIRequest {
+  public typealias Response = CoinListResponse
   
-  var resourceName: String {
+  public var resourceName: String {
     return "all/coinlist"
   }
 }

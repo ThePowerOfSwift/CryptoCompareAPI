@@ -10,14 +10,8 @@ import XCTest
 @testable import CryptoCompareApi
 
 class CryptoCompareResponseParserTests: XCTestCase {
-  func data(from filename: String) throws -> Data {
-    let bundle = Bundle(for: type(of: self))
-    let path = bundle.url(forResource: filename, withExtension: "json")!
-    return try Data(contentsOf: path)
-  }
-  
   func testParseCoinList() {
-    guard let data = try? data(from: "CoinListResponse") else {
+    guard let data = try? Shared.data(from: "CoinListResponse") else {
       XCTFail("Failed to load data")
       return
     }
@@ -30,7 +24,7 @@ class CryptoCompareResponseParserTests: XCTestCase {
   }
   
   func testParseSymbolPrice() {
-    guard let data = try? data(from: "SymbolPrice") else {
+    guard let data = try? Shared.data(from: "SymbolPrice") else {
       XCTFail("Failed to load data")
       return
     }
@@ -43,7 +37,7 @@ class CryptoCompareResponseParserTests: XCTestCase {
   }
   
   func testParseSymbolsPrice() {
-    guard let data = try? data(from: "SymbolsPrice") else {
+    guard let data = try? Shared.data(from: "SymbolsPrice") else {
       XCTFail("Failed to load data")
       return
     }

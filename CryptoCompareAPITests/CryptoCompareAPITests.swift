@@ -9,12 +9,12 @@
 import XCTest
 @testable import CryptoCompareApi
 
-class CryptoCompareApiTests: XCTestCase {
-  private var api: CryptoCompareApi!
+class CryptoCompareAPITests: XCTestCase {
+  private var api: CryptoCompareAPI!
   
   override func setUp() {
     super.setUp()
-    api = CryptoCompareApi(applicationName: Constants.appName)
+    api = CryptoCompareAPI(applicationName: Shared.appName)
   }
   
   func testGetCoinList() {
@@ -31,7 +31,7 @@ class CryptoCompareApiTests: XCTestCase {
       }
     }
     
-    waitForExpectations(timeout: 5, handler: nil)
+    waitForExpectations(timeout: 15, handler: nil)
   }
   
   func testGetSymbolPrice() {
