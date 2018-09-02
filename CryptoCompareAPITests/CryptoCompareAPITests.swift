@@ -49,7 +49,7 @@ class CryptoCompareAPITests: XCTestCase {
       }
     }
     
-    waitForExpectations(timeout: 5, handler: nil)
+    waitForExpectations(timeout: 10, handler: nil)
   }
   
   func testGetSymbolsPrice() {
@@ -67,6 +67,6 @@ class CryptoCompareAPITests: XCTestCase {
       }
     }
     
-    waitForExpectations(timeout: 5, handler: nil)
+    waitForExpectations(timeout: 10, handler: nil)
   }
 }

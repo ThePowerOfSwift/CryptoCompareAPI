@@ -39,15 +39,11 @@ struct CryptoCompareResponse<Response: Decodable>: Decodable {
         throw CryptoCompareError.server(message: message)
       }
       
-      data = try container.decode(Response.self, forKey: .data)
+      data = try! container.decode(Response.self, forKey: .data)
       
     } catch _ as DecodingError {
-      do {
-        let dataContainer = try decoder.singleValueContainer()
-        data = try dataContainer.decode(Response.self)
-      } catch let error {
-        throw CryptoCompareError.decoding(error: error)
-      }
+      let dataContainer = try decoder.singleValueContainer()
+      data = try dataContainer.decode(Response.self)
     }
   }
 }

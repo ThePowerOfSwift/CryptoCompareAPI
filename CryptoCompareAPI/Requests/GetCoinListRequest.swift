@@ -15,5 +15,9 @@ public struct GetCoinListRequest: APIRequest {
     return "all/coinlist"
   }
   
-  public init() {}
+  let builtOn: String?
+  
+  public init(builtOn: String? = nil) {
+    self.builtOn = builtOn
+  }
 }
