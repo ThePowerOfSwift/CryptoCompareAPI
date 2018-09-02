@@ -48,4 +48,17 @@ class CryptoCompareResponseParserTests: XCTestCase {
       XCTFail("Failed to parse response. \(error.localizedDescription)")
     }
   }
+  
+  func testParseSymbolsFullData() {
+    guard let data = try? Shared.data(from: "SymbolsFullData") else {
+      XCTFail("Failed to load data")
+      return
+    }
+    
+    do {
+      _ = try JSONDecoder().decode(CryptoCompareResponse<GetSymbolsFullDataRequest.Response>.self, from: data)
+    } catch let error {
+      XCTFail("Failed to parse response. \(error.localizedDescription)")
+    }
+  }
 }

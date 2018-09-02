@@ -12,6 +12,7 @@ public struct CryptoCompareAPI {
   private let baseEndpoint = "https://min-api.cryptocompare.com/data/"
   private let session: URLSession
   private let applicationName: String?
+  public var logRequests = true
   
   public init(applicationName: String? = nil,
               session: URLSession = URLSession.shared) {
@@ -24,6 +25,10 @@ public struct CryptoCompareAPI {
     completion: @escaping ResultCallback<T.Response>) {
     do {
       let urlRequest = try RequestBuilder.makeURLRequest(for: request, baseEndpoint: baseEndpoint, applicationName: applicationName)
+      
+      if logRequests {
+        print("GET \(urlRequest.url!)")
+      }
       
       session.dataTask(with: urlRequest) { data, response, error in
         do {

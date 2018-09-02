@@ -1,5 +1,5 @@
 //
-//  HTTPParameter.swift
+//  ValueParameter.swift
 //  CryptoCompareApi
 //
 //  Created by Yevhen Velizhenkov on 8/30/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum HTTPParameter: CustomStringConvertible, Decodable {
+public enum ValueParameter: CustomStringConvertible, Decodable {
   case string(String)
   case double(Double)
   case int(Int)
