@@ -33,4 +33,40 @@ class CryptoCompareApiTests: XCTestCase {
     
     waitForExpectations(timeout: 5, handler: nil)
   }
+  
+  func testGetSymbolPrice() {
+    let promise = expectation(description: "Performing request")
+    let request = GetSymbolPriceRequest(fsym: "ETH", tsyms: "BTC,USD", e: .bitstamp)
+    
+    api.send(request) {
+      switch $0 {
+      case .success(let price):
+        XCTAssert(price.count == 2)
+        promise.fulfill()
+        
+      case .failure(let error):
+        XCTFail(error.description)
+      }
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+  }
+  
+  func testGetSymbolsPrice() {
+    let promise = expectation(description: "Performing request")
+    let request = GetSymbolsPriceRequest(fsyms: "BTC,ADA", tsyms: "ETH,USD")
+    
+    api.send(request) {
+      switch $0 {
+      case .success(let price):
+        XCTAssert(price.count == 2)
+        promise.fulfill()
+        
+      case .failure(let error):
+        XCTFail(error.description)
+      }
+    }
+    
+    waitForExpectations(timeout: 5, handler: nil)
+  }
 }

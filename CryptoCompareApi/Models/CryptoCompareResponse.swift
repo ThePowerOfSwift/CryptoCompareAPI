@@ -41,7 +41,7 @@ struct CryptoCompareResponse<Response: Decodable>: Decodable {
       
       data = try container.decode(Response.self, forKey: .data)
       
-    } catch {
+    } catch let _ as DecodingError {
       do {
         let dataContainer = try decoder.singleValueContainer()
         data = try dataContainer.decode(Response.self)

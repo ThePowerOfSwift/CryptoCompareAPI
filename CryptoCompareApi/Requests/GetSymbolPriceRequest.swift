@@ -9,7 +9,7 @@
 import Foundation
 
 struct GetSymbolPriceRequest: APIRequest {
-  typealias Response = String
+  typealias Response = [String: Decimal]
   
   var resourceName: String {
     return "price"

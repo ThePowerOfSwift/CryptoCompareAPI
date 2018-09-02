@@ -28,4 +28,30 @@ class CryptoCompareResponseParserTests: XCTestCase {
       XCTFail("Failed to parse response. \(error.localizedDescription)")
     }
   }
+  
+  func testParseSymbolPrice() {
+    guard let data = try? data(from: "SymbolPrice") else {
+      XCTFail("Failed to load data")
+      return
+    }
+    
+    do {
+      _ = try JSONDecoder().decode(CryptoCompareResponse<GetSymbolPriceRequest.Response>.self, from: data)
+    } catch let error {
+      XCTFail("Failed to parse response. \(error.localizedDescription)")
+    }
+  }
+  
+  func testParseSymbolsPrice() {
+    guard let data = try? data(from: "SymbolsPrice") else {
+      XCTFail("Failed to load data")
+      return
+    }
+    
+    do {
+      _ = try JSONDecoder().decode(CryptoCompareResponse<GetSymbolsPriceRequest.Response>.self, from: data)
+    } catch let error {
+      XCTFail("Failed to parse response. \(error.localizedDescription)")
+    }
+  }
 }

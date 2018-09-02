@@ -9,10 +9,10 @@
 import Foundation
 
 struct GetSymbolsPriceRequest: APIRequest {
-  typealias Response = String
+  typealias Response = [String: GetSymbolPriceRequest.Response]
   
   var resourceName: String {
-    return "coinlist"
+    return "pricemulti"
   }
   
   let fsyms: String

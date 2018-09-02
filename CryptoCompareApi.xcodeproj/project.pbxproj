@@ -12,6 +12,8 @@
 		794EAF30213AC86500939E5B /* CoinListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 794EAF2F213AC86500939E5B /* CoinListResponse.json */; };
 		794EAF33213ADCCC00939E5B /* CoinListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EAF32213ADCCC00939E5B /* CoinListResponse.swift */; };
 		794EAF34213BE45D00939E5B /* CoinListResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 794EAF2F213AC86500939E5B /* CoinListResponse.json */; };
+		794EAF38213C06DA00939E5B /* SymbolPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = 794EAF37213C06DA00939E5B /* SymbolPrice.json */; };
+		794EAF3A213C070000939E5B /* SymbolsPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = 794EAF39213C070000939E5B /* SymbolsPrice.json */; };
 		79ABEDD4213704BC009C8FE4 /* CryptoCompareApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ABEDCA213704BB009C8FE4 /* CryptoCompareApi.framework */; };
 		79ABEDD9213704BC009C8FE4 /* CryptoCompareApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDD8213704BC009C8FE4 /* CryptoCompareApiTests.swift */; };
 		79ABEDDB213704BC009C8FE4 /* CryptoCompareApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 79ABEDCD213704BB009C8FE4 /* CryptoCompareApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +57,8 @@
 		794EAF2D213AC64000939E5B /* CryptoCompareResponseParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareResponseParserTests.swift; sourceTree = "<group>"; };
 		794EAF2F213AC86500939E5B /* CoinListResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CoinListResponse.json; sourceTree = "<group>"; };
 		794EAF32213ADCCC00939E5B /* CoinListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListResponse.swift; sourceTree = "<group>"; };
+		794EAF37213C06DA00939E5B /* SymbolPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SymbolPrice.json; sourceTree = "<group>"; };
+		794EAF39213C070000939E5B /* SymbolsPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SymbolsPrice.json; sourceTree = "<group>"; };
 		79ABEDCA213704BB009C8FE4 /* CryptoCompareApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoCompareApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79ABEDCD213704BB009C8FE4 /* CryptoCompareApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCompareApi.h; sourceTree = "<group>"; };
 		79ABEDCE213704BB009C8FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				794EAF2F213AC86500939E5B /* CoinListResponse.json */,
+				794EAF37213C06DA00939E5B /* SymbolPrice.json */,
+				794EAF39213C070000939E5B /* SymbolsPrice.json */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -330,7 +336,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794EAF3A213C070000939E5B /* SymbolsPrice.json in Resources */,
 				794EAF30213AC86500939E5B /* CoinListResponse.json in Resources */,
+				794EAF38213C06DA00939E5B /* SymbolPrice.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
