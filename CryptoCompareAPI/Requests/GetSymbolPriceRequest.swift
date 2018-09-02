@@ -19,7 +19,7 @@ public struct GetSymbolPriceRequest: APIRequest {
   let tsyms: String
   let e: Exchange?
   
-  init(fsym: String,
+  public init(fsym: String,
        tsyms: String,
        e: Exchange? = nil) {
     self.fsym = fsym

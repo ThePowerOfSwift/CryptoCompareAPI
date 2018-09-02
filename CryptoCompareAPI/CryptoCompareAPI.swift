@@ -19,7 +19,7 @@ public struct CryptoCompareAPI {
     self.session = session
   }
   
-  func send<T: APIRequest>(
+  public func send<T: APIRequest>(
     _ request: T,
     completion: @escaping ResultCallback<T.Response>) {
     do {

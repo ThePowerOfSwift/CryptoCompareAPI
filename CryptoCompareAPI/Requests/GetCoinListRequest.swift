@@ -14,4 +14,6 @@ public struct GetCoinListRequest: APIRequest {
   public var resourceName: String {
     return "all/coinlist"
   }
+  
+  public init() {}
 }

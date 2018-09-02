@@ -31,21 +31,21 @@ public struct CoinListItem: Decodable {
     case isTrading = "IsTrading"
   }
   
-  let id: String
-  let url: String
-  let imageUrl: String?
-  let name: String
-  let symbol: String
-  let coinName: String
-  let fullName: String
-  let algorithm: String
-  let proofType: String
-  let fullyPremined: String
-  let totalCoinSupply: String
-  let builtOn: String
-  let smartContractAddress: String
-  let preMinedValue: String
-  let sortOrder: String
-  let sponsored: Bool
-  let isTrading: Bool
+  public let id: String
+  public let url: String
+  public let imageUrl: String?
+  public let name: String
+  public let symbol: String
+  public let coinName: String
+  public let fullName: String
+  public let algorithm: String
+  public let proofType: String
+  public let fullyPremined: String
+  public let totalCoinSupply: String
+  public let builtOn: String
+  public let smartContractAddress: String
+  public let preMinedValue: String
+  public let sortOrder: String
+  public let sponsored: Bool
+  public let isTrading: Bool
 }
