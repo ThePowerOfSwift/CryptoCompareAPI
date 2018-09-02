@@ -12,7 +12,7 @@ public enum CryptoCompareError: Error, CustomStringConvertible {
   case parameterTypeNotSupported
   case requestBuildingError(message: String)
   case encoding
-  case decoding
+  case decoding(error: Error?)
   case server(message: String)
   case noData
   case requestError(error: Error)
@@ -34,6 +34,9 @@ public enum CryptoCompareError: Error, CustomStringConvertible {
       
     case .server(let message):
       return "Server error. \(message)"
+      
+    case .decoding(let error):
+      return error?.localizedDescription ?? "Decoding error."
       
     default:
       return "CryptoCompareApi internal error."

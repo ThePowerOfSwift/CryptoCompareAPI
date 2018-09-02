@@ -28,8 +28,8 @@ public struct CryptoCompareApi {
       session.dataTask(with: urlRequest) { data, response, error in
         do {
           let validData = try ResponseValidator.validateDataTaskResponse(data, response, error)
-          let result = try ResponseParser.parseServerResponse(T.Response.self, data: validData)
-          completion(.success(result))
+          let result = try JSONDecoder().decode(CryptoCompareResponse<T.Response>.self, from: validData)
+          completion(.success(result.data))
         } catch let error as CryptoCompareError {
           completion(.failure(error))
           return

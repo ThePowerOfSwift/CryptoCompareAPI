@@ -10,19 +10,22 @@ import XCTest
 @testable import CryptoCompareApi
 
 class CryptoCompareResponseParserTests: XCTestCase {
+  func data(from filename: String) throws -> Data {
+    let bundle = Bundle(for: type(of: self))
+    let path = bundle.url(forResource: filename, withExtension: "json")!
+    return try Data(contentsOf: path)
+  }
+  
   func testParseCoinList() {
-    guard let json = try? String(contentsOfFile: "Responses/CoinListResponse.json") else {
-      XCTFail("Failed to load json response from file")
-    }
-    
-    guard let data = json.data(using: .utf8) else {
-      XCTFail("Failed to load data from json")
+    guard let data = try? data(from: "CoinListResponse") else {
+      XCTFail("Failed to load data")
+      return
     }
     
     do {
-      let parsedResponse = try ResponseParser.parseServerResponse(String.self, data: data)
-    } catch {
-      XCTFail("Failed to parse response")
+      _ = try JSONDecoder().decode(CryptoCompareResponse<CoinListResponse>.self, from: data)
+    } catch let error {
+      XCTFail("Failed to parse response. \(error.localizedDescription)")
     }
   }
 }

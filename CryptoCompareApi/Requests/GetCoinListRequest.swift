@@ -9,7 +9,7 @@
 import Foundation
 
 struct GetCoinListRequest: APIRequest {
-  typealias Response = String
+  typealias Response = CoinListResponse
   
   var resourceName: String {
     return "all/coinlist"

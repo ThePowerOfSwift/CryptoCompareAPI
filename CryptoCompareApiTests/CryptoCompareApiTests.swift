@@ -17,20 +17,20 @@ class CryptoCompareApiTests: XCTestCase {
     api = CryptoCompareApi(applicationName: Constants.appName)
   }
   
-  override func tearDown() {
-      // Put teardown code here. This method is called after the invocation of each test method in the class.
-      super.tearDown()
-  }
-  
   func testGetCoinList() {
+    let promise = expectation(description: "Performing request")
     
-  }
-  
-  func testPerformanceExample() {
-      // This is an example of a performance test case.
-      self.measure {
-          // Put the code you want to measure the time of here.
+    api.send(GetCoinListRequest()) {
+      switch $0 {
+      case .success(let coinList):
+        print("Fetched \(coinList.count) coins.")
+        promise.fulfill()
+        
+      case .failure(let error):
+        XCTFail(error.description)
       }
-  }
+    }
     
+    waitForExpectations(timeout: 5, handler: nil)
+  }
 }

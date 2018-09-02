@@ -9,8 +9,45 @@
 import Foundation
 
 struct CryptoCompareResponse<Response: Decodable>: Decodable {
-  let response: String?
-  let message: String?
+  enum CodingKeys: String, CodingKey {
+    case response = "Response"
+    case message = "Message"
+    case data = "Data"
+  }
   
-  let data: Response?
+  var response: String?
+  var message: String?
+  
+  let data: Response
+  
+  public init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+
+    do {
+      response = try container.decode(String?.self, forKey: .response)
+      message = try container.decode(String?.self, forKey: .message)
+      
+      if let response = response {
+        guard let message = message else {
+          throw CryptoCompareError.decoding(error: nil)
+        }
+        
+        if response != "Success" {
+          throw CryptoCompareError.server(message: message)
+        }
+      } else if let message = message, message != "Success" {
+        throw CryptoCompareError.server(message: message)
+      }
+      
+      data = try container.decode(Response.self, forKey: .data)
+      
+    } catch {
+      do {
+        let dataContainer = try decoder.singleValueContainer()
+        data = try dataContainer.decode(Response.self)
+      } catch let error {
+        throw CryptoCompareError.decoding(error: error)
+      }
+    }
+  }
 }
