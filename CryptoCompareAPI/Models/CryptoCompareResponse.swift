@@ -25,15 +25,11 @@ struct CryptoCompareResponse<Response: Decodable>: Decodable {
 
     do {
       response = try container.decode(String?.self, forKey: .response)
-      message = try container.decode(String?.self, forKey: .message)
+      message = try container.decodeIfPresent(String.self, forKey: .message)
       
       if let response = response {
-        guard let message = message else {
-          throw CryptoCompareError.decoding(error: nil)
-        }
-        
         if response != "Success" {
-          throw CryptoCompareError.server(message: message)
+          throw CryptoCompareError.server(message: message ?? "")
         }
       } else if let message = message, message != "Success" {
         throw CryptoCompareError.server(message: message)
@@ -43,7 +39,7 @@ struct CryptoCompareResponse<Response: Decodable>: Decodable {
       
     } catch _ as DecodingError {
       let dataContainer = try decoder.singleValueContainer()
-      data = try! dataContainer.decode(Response.self)
+      data = try dataContainer.decode(Response.self)
     }
   }
 }

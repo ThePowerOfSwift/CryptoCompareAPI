@@ -86,4 +86,21 @@ class CryptoCompareAPITests: XCTestCase {
     
     waitForExpectations(timeout: 10, handler: nil)
   }
+  
+  func testGetHistoricalDaily() {
+    let promise = expectation(description: "Performing request")
+    let request = GetHistoricalDaily(fsym: "BTC", tsym: "USD")
+    
+    api.send(request) {
+      switch $0 {
+      case .success(_):
+        promise.fulfill()
+        
+      case .failure(let error):
+        XCTFail(error.description)
+      }
+    }
+    
+    waitForExpectations(timeout: 10, handler: nil)
+  }
 }

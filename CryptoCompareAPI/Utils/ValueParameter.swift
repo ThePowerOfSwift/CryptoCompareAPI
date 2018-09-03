@@ -30,6 +30,36 @@ public enum ValueParameter: CustomStringConvertible, Decodable {
     }
   }
   
+  public var doubleValue: Double? {
+    switch self {
+    case .double(let double):
+      return double
+      
+    default:
+      return nil
+    }
+  }
+  
+  public var intValue: Int? {
+    switch self {
+    case .int(let int):
+      return int
+      
+    default:
+      return nil
+    }
+  }
+  
+  public var boolValue: Bool? {
+    switch self {
+    case .bool(let bool):
+      return bool
+      
+    default:
+      return nil
+    }
+  }
+  
   public var description: String {
     switch self {
     case .string(let string):
