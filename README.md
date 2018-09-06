@@ -39,6 +39,28 @@ api.send(request) {
 }
 ```
 
+Sometimes the simple 'result' wrapper is not enough for hard async code, so you can write an extension like this and use the power of promises:
+```swift
+import Promises
+import CryptoCompareAPI
+
+extension CryptoCompareAPI {
+  func send<T: APIRequest>(_ request: T) -> Promise<T.Response> {
+    return Promise { fulfill, reject in
+      self.send(request) {
+        switch $0 {
+        case .success(let value):
+          fulfill(value)
+          
+        case .failure(let error):
+          reject(error)
+        }
+      }
+    }
+  }
+}
+```
+
 # License
 Copyright 2018 Eugene Velizhenkov
 
