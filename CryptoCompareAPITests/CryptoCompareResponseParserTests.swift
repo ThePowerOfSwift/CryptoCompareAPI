@@ -10,68 +10,45 @@ import XCTest
 @testable import CryptoCompareApi
 
 class CryptoCompareResponseParserTests: XCTestCase {
-  func testParseCoinList() {
-    guard let data = try? Shared.data(from: "CoinListResponse") else {
+  func parse<T: APIRequest>(request: T.Type) {
+    var filename = String(describing: request)
+    filename = filename.replacingOccurrences(of: "Get", with: "")
+    filename = filename.replacingOccurrences(of: "Request", with: "")
+    filename.append("Response")
+    
+    guard let data = try? Shared.data(from: filename) else {
       XCTFail("Failed to load data")
       return
     }
     
     do {
-      _ = try JSONDecoder().decode(CryptoCompareResponse<CoinListResponse>.self, from: data)
+      _ = try JSONDecoder().decode(CryptoCompareResponse<T.Response>.self, from: data)
     } catch let error {
       XCTFail("Failed to parse response. \(error.localizedDescription)")
     }
+  }
+  
+  func testParseCoinList() {
+    parse(request: GetCoinListRequest.self)
   }
   
   func testParseSymbolPrice() {
-    guard let data = try? Shared.data(from: "SymbolPrice") else {
-      XCTFail("Failed to load data")
-      return
-    }
-    
-    do {
-      _ = try JSONDecoder().decode(CryptoCompareResponse<GetSymbolPriceRequest.Response>.self, from: data)
-    } catch let error {
-      XCTFail("Failed to parse response. \(error.localizedDescription)")
-    }
+    parse(request: GetSymbolPriceRequest.self)
   }
   
   func testParseSymbolsPrice() {
-    guard let data = try? Shared.data(from: "SymbolsPrice") else {
-      XCTFail("Failed to load data")
-      return
-    }
-    
-    do {
-      _ = try JSONDecoder().decode(CryptoCompareResponse<GetSymbolsPriceRequest.Response>.self, from: data)
-    } catch let error {
-      XCTFail("Failed to parse response. \(error.localizedDescription)")
-    }
+    parse(request: GetSymbolsPriceRequest.self)
   }
   
   func testParseSymbolsFullData() {
-    guard let data = try? Shared.data(from: "SymbolsFullData") else {
-      XCTFail("Failed to load data")
-      return
-    }
-    
-    do {
-      _ = try JSONDecoder().decode(CryptoCompareResponse<GetSymbolsFullDataRequest.Response>.self, from: data)
-    } catch let error {
-      XCTFail("Failed to parse response. \(error.localizedDescription)")
-    }
+    parse(request: GetSymbolsFullDataRequest.self)
   }
   
   func testParseHistoricalDaily() {
-    guard let data = try? Shared.data(from: "HistoricalDaily") else {
-      XCTFail("Failed to load data")
-      return
-    }
-    
-    do {
-      _ = try JSONDecoder().decode(CryptoCompareResponse<GetHistoricalDaily.Response>.self, from: data)
-    } catch let error {
-      XCTFail("Failed to parse response. \(error.localizedDescription)")
-    }
+    parse(request: GetHistoricalDailyRequest.self)
+  }
+  
+  func testParseCustomAverage() {
+    parse(request: GetCustomAverageRequest.self)
   }
 }

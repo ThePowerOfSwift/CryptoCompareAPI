@@ -20,9 +20,10 @@ public struct CryptoCompareAPI {
     self.session = session
   }
   
+  @discardableResult
   public func send<T: APIRequest>(
     _ request: T,
-    completion: @escaping ResultCallback<T.Response>) {
+    completion: @escaping ResultCallback<T.Response>) -> URLSessionDataTask {
     do {
       let urlRequest = try RequestBuilder.makeURLRequest(for: request, baseEndpoint: baseEndpoint, applicationName: applicationName)
       
@@ -30,7 +31,7 @@ public struct CryptoCompareAPI {
         print("GET \(urlRequest.url!)")
       }
       
-      session.dataTask(with: urlRequest) { data, response, error in
+      let task = session.dataTask(with: urlRequest) { data, response, error in
         do {
           let validData = try ResponseValidator.validateDataTaskResponse(data, response, error)
           let result = try JSONDecoder().decode(CryptoCompareResponse<T.Response>.self, from: validData)
@@ -41,7 +42,10 @@ public struct CryptoCompareAPI {
         } catch let error {
           completion(.failure(CryptoCompareError.requestError(error: error)))
         }
-      }.resume()
+      }
+      
+      task.resume()
+      return task
       
     } catch let error as CryptoCompareError {
       fatalError(error.description)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct GetHistoricalDaily: APIRequest {
+public struct GetHistoricalDailyRequest: APIRequest {
   public typealias Response = HistoricalDataResponse
   
   public var resourceName: String {

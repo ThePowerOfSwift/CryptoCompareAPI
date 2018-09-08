@@ -89,7 +89,24 @@ class CryptoCompareAPITests: XCTestCase {
   
   func testGetHistoricalDaily() {
     let promise = expectation(description: "Performing request")
-    let request = GetHistoricalDaily(fsym: "BTC", tsym: "USD")
+    let request = GetHistoricalDailyRequest(fsym: "BTC", tsym: "USD")
+    
+    api.send(request) {
+      switch $0 {
+      case .success(_):
+        promise.fulfill()
+        
+      case .failure(let error):
+        XCTFail(error.description)
+      }
+    }
+    
+    waitForExpectations(timeout: 10, handler: nil)
+  }
+  
+  func testGetCustomAverage() {
+    let promise = expectation(description: "Performing request")
+    let request = GetCustomAverageRequest(fsym: "BTC", tsym: "USD", e: .kraken)
     
     api.send(request) {
       switch $0 {
