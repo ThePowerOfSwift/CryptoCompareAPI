@@ -61,6 +61,15 @@ extension CryptoCompareAPI {
 }
 ```
 
+Sometimes it is useful to have URLSessionTask in control, e.g. to cancel long requests or resume them. For this case the send method returns a data task object.
+```swift
+let dataTask = api.send(request)
+...
+if userWantsToCancelUpdate {
+  dataTask.cancel()
+}
+```
+
 # License
 Copyright 2018 Eugene Velizhenkov
 
