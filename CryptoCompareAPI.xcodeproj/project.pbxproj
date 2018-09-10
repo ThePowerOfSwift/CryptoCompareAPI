@@ -31,12 +31,14 @@
 		79ABEDF421373078009C8FE4 /* GetSymbolsPriceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDF321373078009C8FE4 /* GetSymbolsPriceRequest.swift */; };
 		79ABEDF621373083009C8FE4 /* GetSymbolPriceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDF521373083009C8FE4 /* GetSymbolPriceRequest.swift */; };
 		79ABEDF92137D908009C8FE4 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDF82137D908009C8FE4 /* Exchange.swift */; };
-		79ABEDFC2137E210009C8FE4 /* ValueParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDFB2137E210009C8FE4 /* ValueParameter.swift */; };
+		79ABEDFC2137E210009C8FE4 /* HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDFB2137E210009C8FE4 /* HTTPParameter.swift */; };
 		79ABEDFE2137E272009C8FE4 /* CryptoCompareError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEDFD2137E272009C8FE4 /* CryptoCompareError.swift */; };
 		79ABEE02213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE01213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift */; };
 		79ABEE0421380AAE009C8FE4 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0321380AAE009C8FE4 /* RequestBuilder.swift */; };
 		79ABEE0621380C3C009C8FE4 /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0521380C3C009C8FE4 /* ResponseValidator.swift */; };
 		79ABEE0A21380EB7009C8FE4 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0921380EB7009C8FE4 /* Shared.swift */; };
+		79B2EEE72146FA33008C6418 /* ValueParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B2EEE62146FA33008C6418 /* ValueParameter.swift */; };
+		79B2EEE92146FC7A008C6418 /* CustomAverageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B2EEE82146FC7A008C6418 /* CustomAverageResponse.swift */; };
 		79D318302143CA5900A4D0FD /* GetCustomAverageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3182F2143CA5900A4D0FD /* GetCustomAverageRequest.swift */; };
 		79D318352143CB5200A4D0FD /* CustomAverageResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D318332143CB4D00A4D0FD /* CustomAverageResponse.json */; };
 /* End PBXBuildFile section */
@@ -87,12 +89,14 @@
 		79ABEDF321373078009C8FE4 /* GetSymbolsPriceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSymbolsPriceRequest.swift; sourceTree = "<group>"; };
 		79ABEDF521373083009C8FE4 /* GetSymbolPriceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSymbolPriceRequest.swift; sourceTree = "<group>"; };
 		79ABEDF82137D908009C8FE4 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
-		79ABEDFB2137E210009C8FE4 /* ValueParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueParameter.swift; sourceTree = "<group>"; };
+		79ABEDFB2137E210009C8FE4 /* HTTPParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameter.swift; sourceTree = "<group>"; };
 		79ABEDFD2137E272009C8FE4 /* CryptoCompareError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareError.swift; sourceTree = "<group>"; };
 		79ABEE01213809C3009C8FE4 /* CryptoCompareRequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareRequestBuilderTests.swift; sourceTree = "<group>"; };
 		79ABEE0321380AAE009C8FE4 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		79ABEE0521380C3C009C8FE4 /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
 		79ABEE0921380EB7009C8FE4 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		79B2EEE62146FA33008C6418 /* ValueParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueParameter.swift; sourceTree = "<group>"; };
+		79B2EEE82146FC7A008C6418 /* CustomAverageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAverageResponse.swift; sourceTree = "<group>"; };
 		79D3182F2143CA5900A4D0FD /* GetCustomAverageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomAverageRequest.swift; sourceTree = "<group>"; };
 		79D318332143CB4D00A4D0FD /* CustomAverageResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomAverageResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +218,7 @@
 				794EAF32213ADCCC00939E5B /* CoinListResponse.swift */,
 				794EAF40213C67A000939E5B /* SymbolsFullDataResponse.swift */,
 				794EAF46213D174A00939E5B /* HistoricalDataResponse.swift */,
+				79B2EEE82146FC7A008C6418 /* CustomAverageResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,9 +227,10 @@
 			isa = PBXGroup;
 			children = (
 				79ABEDE621371C0C009C8FE4 /* Result.swift */,
-				79ABEDFB2137E210009C8FE4 /* ValueParameter.swift */,
+				79ABEDFB2137E210009C8FE4 /* HTTPParameter.swift */,
 				79ABEE0321380AAE009C8FE4 /* RequestBuilder.swift */,
 				79ABEE0521380C3C009C8FE4 /* ResponseValidator.swift */,
+				79B2EEE62146FA33008C6418 /* ValueParameter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -385,11 +391,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				79ABEDF621373083009C8FE4 /* GetSymbolPriceRequest.swift in Sources */,
-				79ABEDFC2137E210009C8FE4 /* ValueParameter.swift in Sources */,
+				79ABEDFC2137E210009C8FE4 /* HTTPParameter.swift in Sources */,
 				79ABEDE721371C0C009C8FE4 /* Result.swift in Sources */,
 				794EAF33213ADCCC00939E5B /* CoinListResponse.swift in Sources */,
 				79ABEE0621380C3C009C8FE4 /* ResponseValidator.swift in Sources */,
 				79ABEDE5213716CD009C8FE4 /* CryptoCompareAPI.swift in Sources */,
+				79B2EEE72146FA33008C6418 /* ValueParameter.swift in Sources */,
 				794EAF41213C67A000939E5B /* SymbolsFullDataResponse.swift in Sources */,
 				79ABEDF02137258C009C8FE4 /* CryptoCompareResponse.swift in Sources */,
 				794EAF45213D15BA00939E5B /* GetHistoricalDailyRequest.swift in Sources */,
@@ -402,6 +409,7 @@
 				79D318302143CA5900A4D0FD /* GetCustomAverageRequest.swift in Sources */,
 				794EAF47213D174A00939E5B /* HistoricalDataResponse.swift in Sources */,
 				79ABEDF92137D908009C8FE4 /* Exchange.swift in Sources */,
+				79B2EEE92146FC7A008C6418 /* CustomAverageResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

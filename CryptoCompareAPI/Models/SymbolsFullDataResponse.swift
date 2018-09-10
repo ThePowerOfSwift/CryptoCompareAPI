@@ -5,7 +5,6 @@
 //  Created by Yevhen Velizhenkov on 9/2/18.
 //  Copyright © 2018 tapkain. All rights reserved.
 //
-
 import Foundation
 
 public struct SymbolsFullDataResponse: Decodable {
@@ -57,19 +56,19 @@ public struct SymbolsFullDataResponse: Decodable {
     public let market: String
     public let fromSymbol: String
     public let toSymbol: String
-    public let flags: String?
+    public let flags: ValueParameter?
     public let price: ValueParameter
     public let lastUpdate: ValueParameter
     public let lastVolume: ValueParameter
     public let lastVolumeTo: ValueParameter
     public let lastTradeId: ValueParameter
-    public let volumeDay: ValueParameter
-    public let volumeDayTo: ValueParameter
+    public let volumeDay: ValueParameter?
+    public let volumeDayTo: ValueParameter?
     public let volume24Hour: ValueParameter
     public let volume24HourTo: ValueParameter
-    public let openDay: ValueParameter
-    public let highDay: ValueParameter
-    public let lowDay: ValueParameter
+    public let openDay: ValueParameter?
+    public let highDay: ValueParameter?
+    public let lowDay: ValueParameter?
     public let open24Hour: ValueParameter
     public let high24Hour: ValueParameter
     public let low24Hour: ValueParameter
@@ -78,9 +77,9 @@ public struct SymbolsFullDataResponse: Decodable {
     public let changePct24Hour: ValueParameter
     public let changeDay: ValueParameter
     public let changePctDay: ValueParameter
-    public let supply: ValueParameter
-    public let marketCap: ValueParameter
-    public let totalVolume24Hour: ValueParameter
-    public let totalVolume24HourTo: ValueParameter
+    public let supply: ValueParameter?
+    public let marketCap: ValueParameter?
+    public let totalVolume24Hour: ValueParameter?
+    public let totalVolume24HourTo: ValueParameter?
   }
 }

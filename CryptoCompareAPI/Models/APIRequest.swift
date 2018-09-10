@@ -19,7 +19,7 @@ public protocol APIRequest: Codable {
 extension APIRequest {
   public func makeURLQueryItems() throws -> [URLQueryItem] {
     let parametersData = try JSONEncoder().encode(self)
-    let parameters = try JSONDecoder().decode([String: ValueParameter].self, from: parametersData)
+    let parameters = try JSONDecoder().decode([String: HTTPParameter].self, from: parametersData)
     
     return parameters.sorted { $0.key < $1.key }.map { URLQueryItem(name: $0.key, value: $0.value.description) }
   }

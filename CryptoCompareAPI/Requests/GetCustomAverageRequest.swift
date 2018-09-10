@@ -9,7 +9,7 @@
 import Foundation
 
 public struct GetCustomAverageRequest: APIRequest {
-  public typealias Response = SymbolsFullDataResponse
+  public typealias Response = CustomAverageResponse
   
   public var resourceName: String {
     return "generateAvg"
