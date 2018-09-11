@@ -1,10 +1,19 @@
 # CryptoCompareAPI 
 Swifty cryptocompare api client
 
-# Pod install
+## ☑ TODO
+
+- [X] Price API
+- [X] Other Info API
+- [ ] Historical Data API
+- [ ] Toplists API
+- [ ] Steaming API
+- [ ] News API
+
+## ✏️Pod install
 Add `pod 'CryptoCompareAPI'` to your Podfile. Run `pod install`
 
-# Example
+## 💡Example
 ```swift
 let api = CryptoCompareAPI(applicationName: "MyApp")
     
@@ -70,7 +79,7 @@ if userWantsToCancelUpdate {
 }
 ```
 
-# License
+## 📝License
 Copyright 2018 Eugene Velizhenkov
 
 Licensed under the MIT License; you may not use this file except in compliance with the License. You may obtain a copy of the License at
