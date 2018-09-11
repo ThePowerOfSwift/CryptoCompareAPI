@@ -18,10 +18,10 @@ public struct HistoryEntry: Decodable {
   }
   
   public let time: Int
-  public let close: Decimal
-  public let high: Decimal
-  public let low: Decimal
-  public let open: Decimal
-  public let volumeFrom: Decimal
-  public let volumeTo: Decimal
+  public let close: Double
+  public let high: Double
+  public let low: Double
+  public let open: Double
+  public let volumeFrom: Double
+  public let volumeTo: Double
 }

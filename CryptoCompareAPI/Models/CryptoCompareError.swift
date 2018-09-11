@@ -42,4 +42,13 @@ public enum CryptoCompareError: Error, CustomStringConvertible {
       return "CryptoCompareApi internal error."
     }
   }
+  
+  public var serverErrorMessage: String? {
+    switch self {
+    case .server(let message):
+      return message
+    default:
+      return nil
+    }
+  }
 }

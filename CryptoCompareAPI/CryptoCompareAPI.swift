@@ -31,15 +31,18 @@ public struct CryptoCompareAPI {
         print("GET \(urlRequest.url!)")
       }
       
-      let task = session.dataTask(with: urlRequest) { data, response, error in
+      var task: URLSessionDataTask!
+      task = session.dataTask(with: urlRequest) { data, response, error in
         do {
           let validData = try ResponseValidator.validateDataTaskResponse(data, response, error)
           let result = try JSONDecoder().decode(CryptoCompareResponse<T.Response>.self, from: validData)
           completion(.success(result.data))
         } catch let error as CryptoCompareError {
+          task.cancel()
           completion(.failure(error))
           return
         } catch let error {
+          task.cancel()
           completion(.failure(CryptoCompareError.requestError(error: error)))
         }
       }
