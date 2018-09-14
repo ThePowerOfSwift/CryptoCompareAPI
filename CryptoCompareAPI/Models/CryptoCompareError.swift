@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum CryptoCompareError: Error, CustomStringConvertible {
+public enum CryptoCompareError: LocalizedError, CustomStringConvertible {
   case parameterTypeNotSupported
   case requestBuildingError(message: String)
   case encoding
@@ -41,6 +41,10 @@ public enum CryptoCompareError: Error, CustomStringConvertible {
     default:
       return "CryptoCompareApi internal error."
     }
+  }
+  
+  public var errorDescription: String? {
+    return "CryptoCompareAPI: \(description)"
   }
   
   public var serverErrorMessage: String? {

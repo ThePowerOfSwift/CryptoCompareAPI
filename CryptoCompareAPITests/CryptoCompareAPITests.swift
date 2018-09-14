@@ -120,4 +120,27 @@ class CryptoCompareAPITests: XCTestCase {
     
     waitForExpectations(timeout: 10, handler: nil)
   }
+  
+  func testGetExchanges() {
+    let promise = expectation(description: "Performing request")
+    let request = GetExchangesRequest()
+    
+    api.send(request) {
+      switch $0 {
+      case .success(let exchanges):
+        exchanges.forEach {
+          guard let _ = Exchange(rawValue: $0.key) else {
+            XCTFail("Exchange \($0.key) is not in the enum.")
+            return
+          }
+        }
+        promise.fulfill()
+        
+      case .failure(let error):
+        XCTFail(error.description)
+      }
+    }
+    
+    waitForExpectations(timeout: 10, handler: nil)
+  }
 }

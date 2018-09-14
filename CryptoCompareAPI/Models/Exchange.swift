@@ -171,5 +171,8 @@ public enum Exchange: String, Codable {
   case gneiss = "Gneiss"
   case liqnet = "Liqnet"
   case bcex = "BCEX"
+  case bitforex = "Bitforex"
+  case iqfinex = "IQFinex"
+  case p2pb2b = "P2PB2B"
   case defaultMarket = "CCCAGG"
 }
