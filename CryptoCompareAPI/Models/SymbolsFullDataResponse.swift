@@ -72,7 +72,7 @@ public struct SymbolsFullDataResponse: Decodable {
     public let open24Hour: ValueParameter
     public let high24Hour: ValueParameter
     public let low24Hour: ValueParameter
-    public let lastMarket: String
+    public let lastMarket: String?
     public let change24Hour: ValueParameter
     public let changePct24Hour: ValueParameter
     public let changeDay: ValueParameter

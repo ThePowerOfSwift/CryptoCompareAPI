@@ -14,4 +14,6 @@ public struct GetExchangesRequest: APIRequest {
   public var resourceName: String {
     return "all/exchanges"
   }
+  
+  public init() {}
 }

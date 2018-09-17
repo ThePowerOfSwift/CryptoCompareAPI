@@ -21,6 +21,8 @@ public enum ValueParameter: Decodable {
       self = .double(Double(int))
     } else if let double = try? container.decode(Double.self) {
       self = .double(double)
+    } else if container.decodeNil() {
+      self = .double(0.0)
     } else {
       throw CryptoCompareError.parameterTypeNotSupported
     }
