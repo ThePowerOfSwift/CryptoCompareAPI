@@ -48,6 +48,10 @@ class CryptoCompareResponseParserTests: XCTestCase {
     parse(request: GetHistoricalDailyRequest.self)
   }
   
+  func testParseHistoricalHourly() {
+    parse(request: GetHistoricalHourlyRequest.self)
+  }
+  
   func testParseCustomAverage() {
     parse(request: GetCustomAverageRequest.self)
   }

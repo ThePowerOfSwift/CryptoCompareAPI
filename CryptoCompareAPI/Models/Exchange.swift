@@ -9,6 +9,8 @@
 import Foundation
 
 public enum Exchange: String, Codable {
+  case stocksexchange = "StocksExchange"
+  case icoinbay = "iCoinbay"
   case cryptsy = "Cryptsy"
   case btcchina = "BTCChina"
   case bitstamp = "Bitstamp"

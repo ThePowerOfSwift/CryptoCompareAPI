@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CryptoCompareAPI"
-  s.version      = "0.4.6"
+  s.version      = "0.4.9"
   s.summary      = "Swifty CryptoCompare API client."
   s.description  = "CryptoCompareAPI is an easy to use and well tested API client
 for the best free to use cryptocurrency database."
