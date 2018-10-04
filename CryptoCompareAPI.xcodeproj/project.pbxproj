@@ -43,6 +43,9 @@
 		79ABEE0A21380EB7009C8FE4 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ABEE0921380EB7009C8FE4 /* Shared.swift */; };
 		79B2EEE72146FA33008C6418 /* ValueParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B2EEE62146FA33008C6418 /* ValueParameter.swift */; };
 		79B2EEE92146FC7A008C6418 /* CustomAverageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B2EEE82146FC7A008C6418 /* CustomAverageResponse.swift */; };
+		79C763822166242F005BD675 /* GetNewsFeedsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C763812166242F005BD675 /* GetNewsFeedsRequest.swift */; };
+		79C7638421662470005BD675 /* NewsFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C7638321662470005BD675 /* NewsFeedResponse.swift */; };
+		79C7638721662892005BD675 /* NewsFeedsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 79C7638521662717005BD675 /* NewsFeedsResponse.json */; };
 		79D318302143CA5900A4D0FD /* GetCustomAverageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3182F2143CA5900A4D0FD /* GetCustomAverageRequest.swift */; };
 		79D318352143CB5200A4D0FD /* CustomAverageResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 79D318332143CB4D00A4D0FD /* CustomAverageResponse.json */; };
 /* End PBXBuildFile section */
@@ -105,6 +108,9 @@
 		79ABEE0921380EB7009C8FE4 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		79B2EEE62146FA33008C6418 /* ValueParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueParameter.swift; sourceTree = "<group>"; };
 		79B2EEE82146FC7A008C6418 /* CustomAverageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAverageResponse.swift; sourceTree = "<group>"; };
+		79C763812166242F005BD675 /* GetNewsFeedsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNewsFeedsRequest.swift; sourceTree = "<group>"; };
+		79C7638321662470005BD675 /* NewsFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedResponse.swift; sourceTree = "<group>"; };
+		79C7638521662717005BD675 /* NewsFeedsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewsFeedsResponse.json; sourceTree = "<group>"; };
 		79D3182F2143CA5900A4D0FD /* GetCustomAverageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomAverageRequest.swift; sourceTree = "<group>"; };
 		79D318332143CB4D00A4D0FD /* CustomAverageResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomAverageResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +161,7 @@
 				79D318332143CB4D00A4D0FD /* CustomAverageResponse.json */,
 				79875BB4214BE686000CBE14 /* ExchangesResponse.json */,
 				796C08992151801F006DD1DF /* HistoricalHourlyResponse.json */,
+				79C7638521662717005BD675 /* NewsFeedsResponse.json */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 				79D3182F2143CA5900A4D0FD /* GetCustomAverageRequest.swift */,
 				79875BB0214BE5D9000CBE14 /* GetExchangesRequest.swift */,
 				796C089721517FB3006DD1DF /* GetHistoricalHourlyRequest.swift */,
+				79C763812166242F005BD675 /* GetNewsFeedsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				794EAF40213C67A000939E5B /* SymbolsFullDataResponse.swift */,
 				794EAF46213D174A00939E5B /* HistoricalDataResponse.swift */,
 				79B2EEE82146FC7A008C6418 /* CustomAverageResponse.swift */,
+				79C7638321662470005BD675 /* NewsFeedResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,6 +394,7 @@
 				794EAF49213D193100939E5B /* HistoricalDailyResponse.json in Resources */,
 				794EAF43213C712300939E5B /* SymbolsFullDataResponse.json in Resources */,
 				79D318352143CB5200A4D0FD /* CustomAverageResponse.json in Resources */,
+				79C7638721662892005BD675 /* NewsFeedsResponse.json in Resources */,
 				794EAF38213C06DA00939E5B /* SymbolPriceResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,11 +417,13 @@
 				79ABEDF621373083009C8FE4 /* GetSymbolPriceRequest.swift in Sources */,
 				79ABEDFC2137E210009C8FE4 /* HTTPParameter.swift in Sources */,
 				79ABEDE721371C0C009C8FE4 /* Result.swift in Sources */,
+				79C763822166242F005BD675 /* GetNewsFeedsRequest.swift in Sources */,
 				794EAF33213ADCCC00939E5B /* CoinListResponse.swift in Sources */,
 				79ABEE0621380C3C009C8FE4 /* ResponseValidator.swift in Sources */,
 				79ABEDE5213716CD009C8FE4 /* CryptoCompareAPI.swift in Sources */,
 				79B2EEE72146FA33008C6418 /* ValueParameter.swift in Sources */,
 				794EAF41213C67A000939E5B /* SymbolsFullDataResponse.swift in Sources */,
+				79C7638421662470005BD675 /* NewsFeedResponse.swift in Sources */,
 				79ABEDF02137258C009C8FE4 /* CryptoCompareResponse.swift in Sources */,
 				794EAF45213D15BA00939E5B /* GetHistoricalDailyRequest.swift in Sources */,
 				79ABEDEB21371CDF009C8FE4 /* APIRequest.swift in Sources */,

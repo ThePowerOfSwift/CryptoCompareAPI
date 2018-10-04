@@ -22,7 +22,7 @@ class CryptoCompareResponseParserTests: XCTestCase {
     }
     
     do {
-      _ = try JSONDecoder().decode(CryptoCompareResponse<T.Response>.self, from: data)
+      _ = try! JSONDecoder().decode(CryptoCompareResponse<T.Response>.self, from: data)
     } catch let error {
       XCTFail("Failed to parse response. \(error.localizedDescription)")
     }
@@ -58,5 +58,9 @@ class CryptoCompareResponseParserTests: XCTestCase {
   
   func testParseExchanges() {
     parse(request: GetExchangesRequest.self)
+  }
+  
+  func testParseNewsFeeds() {
+    parse(request: GetNewsFeedsRequest.self)
   }
 }

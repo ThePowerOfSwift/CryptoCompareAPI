@@ -138,6 +138,23 @@ class CryptoCompareAPITests: XCTestCase {
     waitForExpectations(timeout: 10, handler: nil)
   }
   
+  func testGetNewsFeeds() {
+    let promise = expectation(description: "Performing request")
+    let request = GetNewsFeedsRequest()
+    
+    api.send(request) {
+      switch $0 {
+      case .success(_):
+        promise.fulfill()
+        
+      case .failure(let error):
+        XCTFail(error.description)
+      }
+    }
+    
+    waitForExpectations(timeout: 10, handler: nil)
+  }
+  
   func testGetExchanges() {
     let promise = expectation(description: "Performing request")
     let request = GetExchangesRequest()

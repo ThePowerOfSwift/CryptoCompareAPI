@@ -24,3 +24,17 @@ extension APIRequest {
     return parameters.sorted { $0.key < $1.key }.map { URLQueryItem(name: $0.key, value: $0.value.description) }
   }
 }
+
+
+class AnyAPIRequest<T: Decodable>: APIRequest {
+  typealias Response = T
+  private var _resourceName: String
+  
+  init<U: APIRequest>(_ apiRequest: U) {
+    _resourceName = apiRequest.resourceName
+  }
+  
+  var resourceName: String {
+    return _resourceName
+  }
+}
