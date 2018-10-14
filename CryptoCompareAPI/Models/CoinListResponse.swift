@@ -45,7 +45,7 @@ public struct CoinListItem: Decodable {
   public let algorithm: String
   public let proofType: String
   public let fullyPremined: String
-  public let totalCoinSupply: String
+  public let totalCoinSupply: Double?
   public let builtOn: String
   public let smartContractAddress: String
   public let preMinedValue: String
@@ -64,7 +64,19 @@ public struct CoinListItem: Decodable {
     algorithm = try container.decode(String.self, forKey: .algorithm)
     proofType = try container.decode(String.self, forKey: .proofType)
     fullyPremined = try container.decode(String.self, forKey: .fullyPremined)
-    totalCoinSupply = try container.decode(String.self, forKey: .totalCoinSupply)
+    
+    let totalCoinSupply = try container.decode(String.self, forKey: .totalCoinSupply)
+    if totalCoinSupply != "N/A" {
+      let formatted = totalCoinSupply
+        .trimmingCharacters(in: .whitespacesAndNewlines)
+        .replacingOccurrences(of: ",", with: "")
+        .replacingOccurrences(of: ".", with: "")
+        .replacingOccurrences(of: " ", with: "")
+      self.totalCoinSupply = Double(formatted)!
+    } else {
+      self.totalCoinSupply = nil
+    }
+    
     builtOn = try container.decode(String.self, forKey: .builtOn)
     smartContractAddress = try container.decode(String.self, forKey: .smartContractAddress)
     preMinedValue = try container.decode(String.self, forKey: .preMinedValue)
